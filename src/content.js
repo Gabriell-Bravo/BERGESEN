@@ -9,7 +9,12 @@ export const address = {
     "Centro, Rio de Janeiro — RJ",
     "CEP 20031-005",
   ],
+  query: "Av. Almirante Barroso, 97, Centro, Rio de Janeiro",
 };
+
+export const mapEmbed = `https://maps.google.com/maps?q=${encodeURIComponent(address.query)}&z=16&output=embed`;
+
+export const mapLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address.query)}`;
 
 export const desks = [
   {

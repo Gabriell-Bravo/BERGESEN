@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { address, desks, frames, phone } from "../content.js";
+import { address, desks, frames, mapEmbed, mapLink, phone } from "../content.js";
 import { PageHero } from "../components/Band.jsx";
 import { Reveal } from "../components/Reveal.jsx";
 
@@ -131,7 +131,16 @@ export function Contact() {
               </li>
             ))}
           </ul>
-          <img src={frames.contatoFoto.src} alt={frames.contatoFoto.alt} />
+          <iframe
+            className="where-map"
+            title="Mapa do escritório na Avenida Almirante Barroso, 97, Centro, Rio de Janeiro"
+            src={mapEmbed}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+          <a className="more" href={mapLink} target="_blank" rel="noreferrer">
+            Abrir no mapa
+          </a>
         </aside>
       </div>
     </>

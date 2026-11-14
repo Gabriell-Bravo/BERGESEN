@@ -134,12 +134,16 @@ a { color: inherit; }
 .hero {
   position: relative;
   display: grid;
-  grid-template-rows: minmax(18rem, 54vh) auto;
+  grid-template-rows: auto auto;
   background: var(--paper);
   color: var(--navy);
 }
 
-.hero-stage { position: relative; overflow: hidden; min-height: 22rem; }
+.hero-stage {
+  position: relative;
+  overflow: hidden;
+  height: clamp(16rem, 54vh, 36rem);
+}
 
 .hero-stage img {
   position: absolute;
@@ -244,11 +248,12 @@ a { color: inherit; }
 
 .intro p { max-width: 42ch; font-size: 1.2rem; color: var(--ink-soft); }
 
-.year {
+.intro .year {
+  max-width: none;
   margin: 0 0 0.6rem;
   font-family: var(--display);
   font-weight: 700;
-  font-size: clamp(4rem, 9vw, 6rem);
+  font-size: clamp(4rem, 12vw, 6rem);
   line-height: 0.8;
   letter-spacing: -0.04em;
   color: var(--red);
@@ -422,12 +427,16 @@ a { color: inherit; }
 .page-hero {
   position: relative;
   display: grid;
-  grid-template-rows: minmax(16rem, 52vh) auto;
+  grid-template-rows: auto auto;
   background: var(--paper);
   color: var(--navy);
 }
 
-.page-hero-media { position: relative; min-height: 16rem; overflow: hidden; }
+.page-hero-media {
+  position: relative;
+  overflow: hidden;
+  height: clamp(14rem, 52vh, 34rem);
+}
 
 .page-hero-media img {
   position: absolute;
@@ -544,10 +553,52 @@ a { color: inherit; }
 .colophon nav a { text-decoration: none; }
 
 @media (max-width: 860px) {
-  .mast { flex-wrap: wrap; }
-  .tel { margin-left: 0; }
-  .hero { grid-template-rows: 58vw auto; }
-  .hero-copy { padding: 1.4rem 1.25rem 1.6rem; }
+  :root { --mast: 6.6rem; }
+
+  .mast {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "brand tel"
+      "nav nav";
+    align-items: center;
+    gap: 0.35rem 0.75rem;
+    min-height: 0;
+    padding: 0.55rem 1rem 0.5rem;
+  }
+
+  .brand { grid-area: brand; }
+  .brand img { height: 1.85rem; }
+  .nav {
+    grid-area: nav;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 0.35rem;
+    width: 100%;
+  }
+  .nav a { font-size: 0.98rem; white-space: nowrap; }
+  .tel {
+    grid-area: tel;
+    margin-left: 0;
+    justify-self: end;
+    font-size: 0.92rem;
+  }
+
+  .hero,
+  .page-hero { grid-template-rows: auto auto; }
+  .hero-stage,
+  .page-hero-media {
+    height: 58vw;
+    min-height: 13.5rem;
+  }
+  .hero-copy h1,
+  .page-hero h1 { font-size: clamp(2.15rem, 9vw, 2.7rem); }
+  .hero-copy { padding: 1.35rem 1.15rem 1.7rem; }
+  .hero-lead,
+  .page-hero p,
+  .intro p,
+  .band-copy p { font-size: 1.05rem; }
+
   .intro,
   .band,
   .contact-grid,
@@ -557,19 +608,40 @@ a { color: inherit; }
     position: relative;
     top: auto;
     height: 62vw;
-    min-height: 14rem;
+    min-height: 13rem;
   }
-  .band-copy { padding: 1.75rem 1.25rem 2.2rem; }
+  .band-copy { padding: 1.5rem 1.15rem 1.8rem; }
+  .band-copy h2,
+  .mesas h2,
+  .intro h2 { font-size: clamp(2rem, 8.5vw, 2.7rem); }
+
   .desk-row { flex-direction: column; }
-  .intro { padding: 3rem 1.25rem; }
-  .intro-photo img { height: 18rem; }
-  .page-hero { grid-template-rows: 58vw auto; }
+  .desk { flex: none; width: 100%; }
+  .desk-photo { height: 12rem; }
+  .desk h2 { font-size: 1.45rem; }
+
+  .intro { padding: 2.6rem 1.15rem; gap: 1.5rem; }
+  .intro-photo img { height: 16rem; }
+
+  .roles li { font-size: clamp(1.7rem, 8vw, 2.5rem); }
+  .roles { padding-top: 2.6rem; padding-bottom: 2.8rem; }
+
   .page-hero-copy,
   .mesas,
   .roles,
   .prose,
-  .contact-grid { padding-left: 1.25rem; padding-right: 1.25rem; }
-  .hero-copy { padding: 1.4rem 1.25rem 2rem; }
+  .contact-grid { padding-left: 1.15rem; padding-right: 1.15rem; }
+  .mesas,
+  .prose,
+  .contact-grid { padding-top: 2.4rem; padding-bottom: 2.6rem; }
+
+  .letter input,
+  .letter textarea,
+  .letter button { width: 100%; }
+  .footer-mails a,
+  .desk-mail a,
+  .where a { overflow-wrap: anywhere; }
+  .where img { height: 12rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

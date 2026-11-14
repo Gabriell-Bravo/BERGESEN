@@ -15,7 +15,7 @@ export function Home() {
     target: intro,
     offset: ["start end", "end start"],
   });
-  const yearY = useTransform(scrollYProgress, [0, 1], [40, -40]);
+  const yearY = useTransform(scrollYProgress, [0, 1], [14, -14]);
 
   useEffect(() => {
     document.title = "Bergesen do Brasil · Agência marítima";

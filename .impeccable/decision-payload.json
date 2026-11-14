@@ -1,0 +1,175 @@
+{
+  "title": "Escolha o mundo visual",
+  "question": "A rolagem caiu no içamento da bandeira da casa. Fique com ele, leve uma alternativa, ou rode de novo.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Içamento da bandeira",
+      "kicker": "THE ROLL",
+      "lineage": "bandeira da casa e adriça de um navio de longo curso",
+      "thesis": "A página é um único içamento: a marca no tope e, abaixo, os panos que dizem onde a Bergesen atua e qual mesa chamar.",
+      "palette": ["#9e1b2e", "#1e2a4a", "#d7d1c6", "#14181c", "#6e8b96"],
+      "materials": ["pano cosido", "adriça", "letra bordada"],
+      "viewport": "O tope da adriça ocupa a tela: marca, a frase desde 2007, e três panos de mesa que viram e mostram o e-mail. Guanabara começa no pano de baixo.",
+      "risk": "Vira fantasia náutica se o pano virar alfabeto de bandeiras ou enfeite. O texto fica literal.",
+      "raised": [
+        {"from": "challenger-city", "raise": "O pano é o chão da página inteira, não um ícone no canto."},
+        {"from": "challenger-planes", "raise": "A mesa fica no plano da frente; a costa corre atrás, mais lenta, no mesmo eixo."},
+        {"from": "challenger-tear", "raise": "O trecho que você abre permanece aberto na adriça."},
+        {"from": "challenger-aisle", "raise": "Cada pano tem face, um nome, e verso, o navio e o e-mail."},
+        {"from": "challenger-ascii", "raise": "Uma grelha só. A hierarquia vem da densidade do ponto, sem arco-íris de bandeiras."},
+        {"from": "challenger-event", "raise": "Escolher um pano isola ele e abaixa os outros."}
+      ],
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {"label": "Adriça", "x": 0, "y": 0, "w": 1, "h": 10, "accent": true},
+          {"label": "Marca e navegação", "x": 1, "y": 0, "w": 11, "h": 2},
+          {"label": "Frase desde 2007", "x": 1, "y": 2, "w": 11, "h": 4, "accent": true},
+          {"label": "Três mesas", "x": 1, "y": 6, "w": 11, "h": 3},
+          {"label": "Guanabara começa", "x": 1, "y": 9, "w": 11, "h": 1}
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/assigned.webp"
+    },
+    {
+      "id": "model-pick",
+      "label": "Statement of facts",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "o formulário de tempos que fecha toda escala",
+      "thesis": "A home é o statement of facts da praça do Rio: cada terminal uma linha, o carimbo vermelho é o contato.",
+      "palette": ["#1f4e79", "#f4f1ea", "#c4232b", "#161616"],
+      "materials": ["cópia carbono", "pauta", "carimbo"],
+      "viewport": "Folha em paisagem: coluna de eventos à esquerda, carimbo de falar com a mesa à direita, a linha seguinte já aparecendo.",
+      "risk": "É onde a maioria dos sites sérios de agência acaba: um documento. Familiar de propósito.",
+      "wireframe": {
+        "cols": 12,
+        "rows": 10,
+        "regions": [
+          {"label": "Cabeçalho do formulário", "x": 0, "y": 0, "w": 12, "h": 2},
+          {"label": "Coluna de eventos", "x": 0, "y": 2, "w": 7, "h": 7},
+          {"label": "Carimbo da mesa", "x": 7, "y": 2, "w": 5, "h": 4, "accent": true},
+          {"label": "Notas de margem", "x": 7, "y": 6, "w": 5, "h": 3},
+          {"label": "Linha seguinte", "x": 0, "y": 9, "w": 12, "h": 1}
+        ]
+      },
+      "comp": ".impeccable/mocks/decision/model-pick.webp"
+    },
+    {
+      "id": "challenger-city",
+      "label": "Cidade que dorme dobrada",
+      "verdict": "declined",
+      "lineage": "mapa noturno em que os bairros viram coberta",
+      "thesis": "Guanabara, Sepetiba, Angra e o Norte como bairros que dobram e sonham climas diferentes.",
+      "palette": ["#0e1a33", "#e4c56a", "#f2efe6", "#3d6b8a"],
+      "materials": ["coberta", "costura", "luz de janela"],
+      "viewport": "Um mapa-colcha à meia-noite, os terminais bordados na costura.",
+      "risk": "O operador não se reconhece num sonho. O e-mail some no clima.",
+      "case": "Perde identificação e clareza: a escala não é um bairro que sonha.",
+      "kept": "O material é o chão da página, não um acento.",
+      "hero": "https://impeccable.style/worlds/cards/dream-surreal-impossible-worlds-sleeping-city-fold-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/dream-surreal-impossible-worlds-sleeping-city-fold.webp"
+    },
+    {
+      "id": "challenger-planes",
+      "label": "Amanhecer em planos",
+      "verdict": "declined",
+      "lineage": "cel de animação em que a câmera afunda na névoa",
+      "thesis": "A aproximação do Rio em pinturas que deslizam a velocidades diferentes até a luz do agente.",
+      "palette": ["#1c3a32", "#8aa4a8", "#3d2a1e", "#e0a24a"],
+      "materials": ["guache", "celuloide", "névoa"],
+      "viewport": "Cinco planos pintados, a frase no plano da frente, o terminal ao fundo.",
+      "risk": "Lê-se como estúdio de animação. A mesa de contato não tem onde sentar.",
+      "case": "Perde os dois eixos: a praça não se vê em guache, e a ação vira movimento de câmera.",
+      "kept": "Um eixo só, com o que importa no plano da frente e o resto mais lento.",
+      "hero": "https://impeccable.style/worlds/cards/cinema-cinematography-editing-multiplane-cel-dawn-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/cinema-cinematography-editing-multiplane-cel-dawn.webp"
+    },
+    {
+      "id": "challenger-tear",
+      "label": "Muro de cartazes rasgado",
+      "verdict": "declined",
+      "lineage": "décollage de cartazes parisienses",
+      "thesis": "Avisos de escala rasgados até aparecerem os anos desde 2007 por baixo.",
+      "palette": ["#c8bfb0", "#8d8a84", "#efe8dc", "#6e2e2a"],
+      "materials": ["papel rasgado", "cola", "tinta desbotada"],
+      "viewport": "Um muro em que nenhum nome de terminal está inteiro.",
+      "risk": "A leitura por rasgo esconde o porto e o e-mail. Clareza quebra.",
+      "case": "Perde os dois: o agente não lê o próprio trabalho em cartaz rasgado, e o fragmento incompleto mente sobre a cobertura.",
+      "kept": "O que se abre permanece aberto, como registro.",
+      "hero": "https://impeccable.style/worlds/cards/design-canon-decollage-torn-billboard-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/design-canon-decollage-torn-billboard.webp"
+    },
+    {
+      "id": "challenger-aisle",
+      "label": "Corredor de cereais",
+      "verdict": "declined",
+      "lineage": "planograma de caixas no supermercado",
+      "thesis": "Cada terminal uma caixa na prateleira, o verso com a ficha.",
+      "palette": ["#e23b2f", "#f2c200", "#fffaf2", "#1a1a1a"],
+      "materials": ["cartão couché", "explosão de oferta"],
+      "viewport": "Uma parede de caixas coloridas na altura do olhar.",
+      "risk": "Parece prêmio de supermercado. A agência perde a confiança na primeira tela.",
+      "case": "Perde os dois: ninguém que escala um navio se reconhece no corredor, e o grito da caixa tapa o fato.",
+      "kept": "A face diz um nome; o verso carrega a especificação.",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-cereal-box-aisle-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/pop-culture-shelf-cereal-box-aisle.webp"
+    },
+    {
+      "id": "challenger-ascii",
+      "label": "Cena em caracteres",
+      "verdict": "declined",
+      "lineage": "render ao vivo feito de tipos de máquina",
+      "thesis": "A baía desenhada só com a densidade dos caracteres, num fósforo verde.",
+      "palette": ["#041a0a", "#3dff7a"],
+      "materials": ["grade monoespaçada", "fósforo"],
+      "viewport": "Uma grelha em que o navio é feito de pontos e arrobas.",
+      "risk": "A imagem feita de letra compete com o nome do terminal, que também é letra.",
+      "case": "Perde os dois: o fósforo é cena de demo, e a densidade esconde a oferta.",
+      "kept": "Uma grelha, hierarquia por densidade, paleta curta.",
+      "hero": "https://impeccable.style/worlds/cards/medium-native-ascii-live-scene-render-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/medium-native-ascii-live-scene-render.webp"
+    },
+    {
+      "id": "challenger-event",
+      "label": "Display de colisão",
+      "verdict": "declined",
+      "lineage": "tela de evento de um detector de partículas",
+      "thesis": "Uma escala como evento: trilhas saindo do navio pelos anéis de terminal, prático, agente e tripulação.",
+      "palette": ["#07080c", "#5c6b7a", "#f0d23c", "#2ec4d6", "#d6453d"],
+      "materials": ["vácuo", "anéis de aço", "trilha"],
+      "viewport": "Um corte concêntrico, uma escala de cada vez, no escuro.",
+      "risk": "É o instrumento de outro ofício. Vinte e um terminais não cabem num anel giratório.",
+      "case": "Perde identificação, e a clareza não supera um pano que se lê de cima para baixo.",
+      "kept": "Selecionar isola; o resto abaixa.",
+      "hero": "https://impeccable.style/worlds/cards/scientific-notation-particle-detector-event-display-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/scientific-notation-particle-detector-event-display.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "steer": true,
+  "buildPath": { "value": "code", "toggle": true },
+  "canon": true,
+  "canonCard": {
+    "label": "O padrão da categoria",
+    "thesis": "Foto de navio, três pilares e um botão de contato, feitos sem ironia.",
+    "palette": ["#ffffff", "#1b2a4a", "#c4232b"],
+    "materials": ["fotografia", "grelha limpa"],
+    "viewport": "Casco à esquerda, manchete à direita, três serviços e o botão de contato já na primeira tela.",
+    "risk": "Fica indistinguível das outras agências, de propósito.",
+    "wireframe": {
+      "cols": 12,
+      "rows": 10,
+      "regions": [
+        {"label": "Navegação", "x": 0, "y": 0, "w": 12, "h": 1},
+        {"label": "Foto do navio", "x": 0, "y": 1, "w": 7, "h": 5},
+        {"label": "Manchete", "x": 7, "y": 1, "w": 5, "h": 3},
+        {"label": "Contato", "x": 7, "y": 4, "w": 5, "h": 2, "accent": true},
+        {"label": "Três pilares", "x": 0, "y": 6, "w": 12, "h": 3},
+        {"label": "Seção seguinte", "x": 0, "y": 9, "w": 12, "h": 1}
+      ]
+    },
+    "comp": ".impeccable/mocks/decision/canon.webp"
+  }
+}
